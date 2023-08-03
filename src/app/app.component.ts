@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name :string= 'nicolas';
   age :number=23;
+  estadoButt:boolean=true;
+
+  person={
+
+    name:'camila',
+    age:19
+  }
 }
