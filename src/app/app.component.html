@@ -1,12 +1,26 @@
+<!-- ngif -->
+<h1>ngif</h1>
+<input type="text" [(ngModel)]="person.name" >
+<p *ngIf="person.name=='nicolas'">soy nicolas</p>
+
+<p *ngIf="person.name=='nicolas2' ;else myBlock">soy nicolasssssssssssssss</p>
+<ng-template #myBlock>
+  <p>bloque else</p>
+</ng-template>
+
+<hr>
+
+
+<h1>ngmodel</h1>
 <!-- ngmodel -->
 <input type="text" [(ngModel)]="person.name" >
 <h1>{{person.name}}</h1>
 
 
 
+<hr>
 
-
-
+<h1>eventos</h1>
 <!-- eventos -->
 <button [disabled]="estadoButt">hola ejemplo evento</button>
 <button (click)="actiDesa()">activar o desactivar</button>
