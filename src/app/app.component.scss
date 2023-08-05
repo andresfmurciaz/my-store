@@ -1,7 +1,26 @@
-.box{
+main .products--grid{
 
-  height: 200px;
-  width: 200px;
-  overflow: auto;
-  background: red;
+  display: flex;
+  flex-direction: column;
+
+  div{
+    img{
+      width: 280px;
+      height: 200px;
+      border-radius: 18px;
+    }
+  }
+
+}
+
+
+@media screen and (min-width:600px) {
+
+main .products--grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
 }
