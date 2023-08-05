@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Productos } from './product.models';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,34 @@ export class AppComponent {
   age :number=23;
   estadoButt:boolean=true;
 
-  person={
 
+product: Productos[] =[
+
+  {
+    name:'perro',
+    image:'../assets/perro.webp'
+  },
+  {
+    name:'gato',
+    image:'../assets/gato.jpg'
+  },
+  {
+    name:'caballo',
+    image:'../assets/caballo.jpg'
+  },
+  {
+    name:'vaca',
+    image:'../assets/vaca.jpeg'
+  },
+
+
+
+]
+
+
+
+
+  person={
     name:'camila',
     age:19
   }
@@ -20,13 +47,11 @@ export class AppComponent {
   this.estadoButt=!this.estadoButt
 
   }
-
-
   aumentarEdad(){
     this.person.age= this.person.age+1;
   }
 
-  leerScroll(event:Event){
+leerScroll(event:Event){
 const elemnto = event.target as HTMLElement;
 console.log(elemnto)
 }

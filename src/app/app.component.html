@@ -1,61 +1,23 @@
-<!-- ngif -->
-<h1>ngif</h1>
-<input type="text" [(ngModel)]="person.name" >
-<p *ngIf="person.name=='nicolas'">soy nicolas</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
 
-<p *ngIf="person.name=='nicolas2' ;else myBlock">soy nicolasssssssssssssss</p>
-<ng-template #myBlock>
-  <p>bloque else</p>
-</ng-template>
+<main>
+  <section>
+    <div *ngFor="let producto of product">
 
-<hr>
+      <h1>{{producto.name}}</h1>
+      <img src="{{producto.image}}" alt="">
 
+    </div>
+  </section>
+</main>
 
-<h1>ngmodel</h1>
-<!-- ngmodel -->
-<input type="text" [(ngModel)]="person.name" >
-<h1>{{person.name}}</h1>
-
-
-
-<hr>
-
-<h1>eventos</h1>
-<!-- eventos -->
-<button [disabled]="estadoButt">hola ejemplo evento</button>
-<button (click)="actiDesa()">activar o desactivar</button>
-
-<p>aumentar edad {{person.age}}</p>
-<button (click)="aumentarEdad()">aumente la edad </button>
-
-<div class="box" (scroll)="leerScroll($event)">
- <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum illum, quod assumenda unde ratione, eaque quibusdam at reiciendis est labore facilis eveniet vitae soluta repudiandae, autem quam doloremque odio laboriosam?Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ipsam ea placeat totam optio quibusdam voluptates deleniti quasi omnis culpa quae, excepturi vitae corporis laboriosam fugit accusantium magnam vero distinctio.</p>
-</div>
-
-<input type="text" [value]="person.name" (keyup)="leerInput($event)">
-<h1>{{person.name}}</h1>
-
-<hr>
-
- <!-- propiedades binding- para manejar objetos, numero -->
-<!-- se llama variables -->
-<button  [disabled]="estadoButt" >hello</button>
-<progress max="100" [value]="age" ></progress>
-<!-- se llama la variable por medio de un objeto -->
-<input type="text" [value]="person.name">
-
-
-
-
-<hr>
-<!-- string interpole - nos sirve para ingresar contenido string-->
-<h2 ></h2>
-<h1>hola mundo</h1>
-
-<h2>{{'hola'.repeat(2)}}</h2>
-
-<h2>3+3= {{3+3}}</h2>
-
-<h2>{{name + age}}</h2>
-
+</body>
+</html>
 
